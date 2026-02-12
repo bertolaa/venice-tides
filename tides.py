@@ -11,12 +11,14 @@ urls = [
 
 # Read the data from the URLs
 data_frames = []
+
 for url in urls:
     try:
         data_frames.append(pd.read_html(url)[0])
     except Exception as e:
         st.error(f"Error reading {url}: {e}")
 
+st.dataframe (data_frame)
 #st.write (data_frames)
 # Extract the first and second columns for x and y axes
 x = data_frames[0].iloc[:, 0]
