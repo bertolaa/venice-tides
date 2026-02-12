@@ -18,8 +18,8 @@ for url in urls:
     except Exception as e:
         st.error(f"Error reading {url}: {e}")
 
-st.dataframe (data_frame)
-#st.write (data_frames)
+st.write (data_frames[0].iloc[:, 0])
+
 # Extract the first and second columns for x and y axes
 x = data_frames[0].iloc[:, 0]
 y = data_frames[0].iloc[:, 1]
